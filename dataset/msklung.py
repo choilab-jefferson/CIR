@@ -27,8 +27,8 @@ class MSKLung(LIDC):
 
     def pre_process_dataset(self, cfg):
         data_root = cfg.ext_dataset1_path
-        samples_train = glob.glob(f"{data_root}*_1-*CT.npy")
-        samples_test = glob.glob(f"{data_root}*_2-*CT.npy")
+        samples_train = glob.glob(f"{data_root}*_[1,3]-*CT.npy")
+        samples_test = glob.glob(f"{data_root}*_[2,4]-*CT.npy")
  
         pids = []
         nids = []
